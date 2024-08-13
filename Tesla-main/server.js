@@ -29,9 +29,8 @@ function initializeApp() {
       if (error) throw error;
 
       const successfulSubmit = document.querySelector("#validationMessage");
-      successfulSubmit.textContent = "Form submitted successfully!";
+      successfulSubmit.textContent = "Avec succès";
       successfulSubmit.classList.add(
-        "w-full",
         "h-12",
         "px-12",
         "py-3",
@@ -54,16 +53,15 @@ function initializeApp() {
     } catch (error) {
       const unsuccessfulSubmit = document.querySelector("#validationMessage");
       unsuccessfulSubmit.textContent =
-        "An error occurred. Please try again later.";
+        "Une erreure s'est produite lors de l'enregistrement.";
       unsuccessfulSubmit.classList.add(
-        "w-full",
         "h-12",
         "px-12",
         "py-3",
         "rounded-xl",
         "p-2",
         "text-l",
-        "bg-red-500",
+        "bg-red-600",
         "flex",
         "justify-center",
         "items-center",
