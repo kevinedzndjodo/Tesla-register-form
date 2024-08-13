@@ -1,0 +1,19 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+.home{
+  background-image: url(images/teslaenterprise.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.link{
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  border: #fff 1px solid;
+}
