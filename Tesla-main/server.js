@@ -30,11 +30,14 @@ function initializeApp() {
 
       const successfulSubmit = document.querySelector("#successMessage");
       successfulSubmit.classList.remove("hidden");
+
       setTimeout(() => {
         successfulSubmit.style.display = "none";
       }, 3000);
+      form.reset();
+      window.location.reload();
 
-      form.reset(); // Clear the form after successful submission
+      // Clear the form after successful submission
     } catch (error) {
       console.error("Error submitting form:", error);
       const errorMessage = document.querySelector("#errorMessage");
