@@ -28,50 +28,21 @@ function initializeApp() {
 
       if (error) throw error;
 
-      const successfulSubmit = document.querySelector("#validationMessage");
-      successfulSubmit.textContent = "Avec succès";
-      successfulSubmit.classList.add(
-        "h-12",
-        "px-12",
-        "py-3",
-        "rounded-xl",
-        "p-2",
-        "text-l",
-        "bg-green-500",
-        "text-white",
-        "flex",
-        "justify-center",
-        "items-center",
-        "text-center",
-        "font-medium"
-      );
+      const successfulSubmit = document.querySelector("#successMessage");
+      successfulSubmit.classList.remove("hidden");
       setTimeout(() => {
         successfulSubmit.style.display = "none";
-      }, 2000);
+      }, 3000);
 
       form.reset(); // Clear the form after successful submission
     } catch (error) {
-      const unsuccessfulSubmit = document.querySelector("#validationMessage");
-      unsuccessfulSubmit.textContent =
-        "Une erreure s'est produite lors de l'enregistrement.";
-      unsuccessfulSubmit.classList.add(
-        "h-12",
-        "px-12",
-        "py-3",
-        "rounded-xl",
-        "p-2",
-        "text-l",
-        "bg-red-600",
-        "flex",
-        "justify-center",
-        "items-center",
-        "text-white",
-        "font-medium",
-        "text-center"
-      );
+      console.error("Error submitting form:", error);
+      const errorMessage = document.querySelector("#errorMessage");
+      errorMessage.textContent = error.message;
+      errorMessage.classList.remove("hidden");
       setTimeout(() => {
-        unsuccessfulSubmit.style.display = "none";
-      }, 1000);
+        errorMessage.style.display = "none";
+      }, 3000);
     }
   });
 }
