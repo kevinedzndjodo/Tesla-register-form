@@ -46,6 +46,9 @@ function initializeApp() {
         "text-center",
         "font-medium"
       );
+      setTimeout(() => {
+        successfulSubmit.style.display = "none";
+      }, 2000);
 
       form.reset(); // Clear the form after successful submission
     } catch (error) {
@@ -68,6 +71,9 @@ function initializeApp() {
         "font-medium",
         "text-center"
       );
+      setTimeout(() => {
+        unsuccessfulSubmit.style.display = "none";
+      }, 1000);
     }
   });
 }
